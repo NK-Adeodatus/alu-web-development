@@ -1,1 +1,22 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex: auto;
+}
+
+article{
+    background-color: rgb(119, 119, 243);
+    flex: 2;
+    overflow: auto;
+}
+
+aside{
+    background-color: rgb(68, 95, 68);
+    flex: 1;
+    overflow: auto;
+}
 
