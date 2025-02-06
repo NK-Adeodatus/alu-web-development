@@ -1,0 +1,489 @@
+@font-face {
+    font-family: myfont-semibold;
+    src: url(source-sans-pro/SourceSansPro-Semibold.otf);
+  }
+  @font-face {
+    font-family: mybold;
+    src: url(source-sans-pro/SourceSansPro-Bold.otf);
+  }
+  @font-face {
+    font-family: myfont-regular;
+    src: url(source-sans-pro/SourceSansPro-Regular.otf);
+  }
+  @font-face {
+    font-family: myfont-black;
+    src: url(source-sans-pro/SourceSansPro-Black.otf);
+  }
+  @font-face {
+    font-family: myfont-blackit;
+    src: url(source-sans-pro/SourceSansPro-BlackIt.otf);
+  }
+  @font-face {
+    font-family: myboldit;
+    src: url(source-sans-pro/SourceSansPro-BoldIt.otf);
+  }
+  @font-face {
+    font-family: myfont-extralight;
+    src: url(source-sans-pro/SourceSansPro-ExtraLight.otf);
+  }
+  @font-face {
+    font-family: myfont-extralightit;
+    src: url(source-sans-pro/SourceSansPro-ExtraLightIt.otf);
+  }
+  @font-face {
+    font-family: myfont-it;
+    src: url(source-sans-pro/SourceSansPro-It.otf);
+  }
+  @font-face {
+    font-family: myfont-light;
+    src: url(source-sans-pro/SourceSansPro-Light.otf);
+  }
+  @font-face {
+    font-family: myfont-lightit;
+    src: url(source-sans-pro/SourceSansPro-LightIt.otf);
+  }
+  @font-face {
+    font-family: myfont-boldit;
+    src: url(source-sans-pro/SourceSansPro-SemiboldIt.otf);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: myfont-semibold;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background: radial-gradient(
+        85.9% 85.9% at 50% 14.1%,
+        rgba(41, 48, 61, 0) 0%,
+        #071629 100%
+      ),
+      #000000;
+    background-blend-mode: normal, color;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 160%;
+    background-image: url(images/girl.png); /* Set the same background image */
+    filter: grayscale(100%); /* Apply 100% grayscale to the background image */
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-size: 1448.15px 1200px;
+    z-index: -1;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    background-image: radial-gradient(
+        85.9% 85.9% at 50% 14.1%,
+        rgba(29, 39, 58, 0) 0%,
+        #071629 100%
+      ),
+      url(images/girl.png);
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+    background-blend-mode: normal, color;
+    background-size: 1448.15px 1285px;
+    z-index: -1;
+  }
+  button {
+    background-color: #c271ff;
+    color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border: 1px #c271ff;
+    border-radius: 22px;
+    height: 44px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  /* header*/
+  
+  header {
+    display: flex;
+    padding: 20px;
+  }
+  header nav {
+    flex: 1;
+    display: flex;
+  }
+  .logo {
+    padding: 20px;
+    color: white;
+    margin-left: 4cm;
+  }
+  .menu {
+    flex: auto;
+    text-align: right;
+    margin-right: 4cm;
+    padding: 20px;
+    letter-spacing: 0;
+    word-spacing: 40px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-family: myfont-semibold;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /*  first secton */
+  
+  .first-section {
+    text-align: center;
+    margin: 0;
+  }
+  .first-section h1 {
+    color: white;
+    font-size: 120px;
+    font-weight: 700;
+    margin-top: 150px;
+    font-family: mybold;
+  }
+  .section {
+    flex: 1;
+    font-size: 16px;
+    word-spacing: 50px;
+    color: white;
+    font-family: myfont-semibold;
+  }
+  .first-section button {
+    margin-top: 2rem;
+  }
+  .first-section h2 {
+    font-weight: 700;
+  }
+  .first-section img {
+    border-radius: 50%;
+  }
+  .pro-title {
+    padding-top: 150px;
+    font-size: 32px;
+    color: #c271ff;
+    font-family: mybold;
+  }
+  .learn {
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: myfont-extralight;
+  }
+  .pros {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .pros-block {
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .pro-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .pro-card h3 {
+    padding: 15px;
+    color: white;
+  }
+  .pro-card p {
+    font-style: italic;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    font-family: myfont-lightit;
+  }
+  
+  /* Second section*/
+  
+  .second-section {
+    background-color: #c271ff;
+    padding: auto;
+    color: white;
+    height: 392px;
+  }
+  .second-section img {
+    border-radius: 50%;
+    padding: 40px;
+    margin-left: 5cm;
+    position: relative;
+    top: 2rem;
+  }
+  .qoute {
+    flex: 1;
+    display: flex;
+    padding: 40px;
+    position: relative;
+    align-items: center;
+  }
+  .qoute-block {
+    flex-direction: column;
+    text-align: left;
+    display: inline;
+  }
+  .first-p {
+    padding-top: 2rem;
+    font-size: 22px;
+    text-align: left;
+    font-weight: 700;
+    font-family: myfont-semibold;
+  }
+  .second-p {
+    padding-top: 1rem;
+    font-size: 22px;
+    text-align: left;
+    font-weight: 400;
+    font-style: italic;
+    font-family: myfont-lightit;
+  }
+  blockquote {
+    flex: 1;
+    display: flex;
+    padding-top: 50px;
+    font-size: 22px;
+    width: 750px;
+    font-weight: 100;
+    font-family: myfont-light;
+  }
+  
+  /* third section */
+  .third-section {
+    justify-content: center;
+    background-color: whitesmoke;
+  }
+  .tutorial-block {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 87px;
+    padding-bottom: 97px;
+    gap: 40px;
+  }
+  .title-tutorial {
+    padding-top: 87px;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: myfont-extralight;
+  }
+  .popular {
+    color: #c271ff;
+    font-family: mybold;
+  }
+  .tutorial-card {
+    text-align: left;
+    align-items: left;
+    display: inline;
+    width: 255px;
+    height: 335px;
+  }
+  .tutorial-card .play {
+    position: relative;
+    margin: auto;
+    top: -110px;
+    left: 33%;
+  }
+  .tutorial-block h2 {
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: -4rem;
+  }
+  .tutorial-block p {
+    padding: 10px;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: myfont-light;
+  }
+  .review {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+  }
+  .review-img {
+    padding: 10px;
+    flex-direction: row;
+  }
+  .review-img p {
+    padding: 10px;
+    text-align: right;
+    color: #c271ff;
+    font-size: 14px;
+    line-height: 27px;
+    font-weight: 600;
+    position: relative;
+    top: -35px;
+    font-family: myfont-regular;
+  }
+  .review img {
+    width: 30px;
+    border-radius: 50%;
+  }
+  .review h3 {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 6px;
+    padding-left: 6px;
+    color: #c271ff;
+  }
+  
+  /* fourth section*/
+  
+  .membership {
+    justify-content: center;
+    background-color: #071629;
+    color: white;
+    text-align: center;
+  }
+  .title-membership {
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: myfont-extralight;
+  }
+  .free {
+    color: #c271ff;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .membership-block {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 80px;
+  }
+  .membership-card {
+    margin-top: 3rem;
+    width: 200px;
+    height: 153px;
+    text-align: center;
+  }
+  .membership-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+  }
+  .membership-card p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: myfont-light;
+  }
+  .membership button {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Last section */
+  
+  .last-section {
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+  }
+  .last-section h1 {
+    color: black;
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 5rem;
+    font-family: myfont-extralight;
+  }
+  .faq-block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    gap: 220px;
+    margin-bottom: 20px;
+  }
+  .faq-row {
+    display: block;
+    gap: 74px;
+  }
+  .faq-card {
+    line-height: 24px;
+    text-align: left;
+    display: inline;
+    padding: 6rem;
+  }
+  .faq-card h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: mybold;
+  }
+  .faq-card p {
+    display: flex;
+    width: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #aaaaaa;
+    font-family: myfont-regular;
+  }
+  
+  /* Footer */
+  
+  footer {
+    flex: 1;
+    display: flex;
+    background-color: #071629;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 249px;
+  }
+  .nav {
+    flex: 1;
+    display: flex;
+    gap: 40rem;
+  }
+  footer p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.3517;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+  }
+  .social {
+    flex: auto;
+    display: flex;
+  }
